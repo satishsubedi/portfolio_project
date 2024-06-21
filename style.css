@@ -14,6 +14,10 @@
 * {
   box-sizing: border-box;
 }
+.wrapper {
+  background: var(--primary);
+  height: 100vh;
+}
 .roboto-regular {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -85,18 +89,18 @@ ul {
   background: var(--primary);
   height: 60vh;
   padding-top: 50px;
+  box-shadow: var(--box-shadow);
 }
 .mid {
-  position: relative;
   display: flex;
   justify-content: space-between;
   background: var(--secondary);
   box-shadow: var(--box-shadow);
-  /* height: 50vh; */
 }
 .info {
   padding-left: 4rem;
   padding-bottom: 0.8rem;
+  /* background: yellow; */
 }
 .btn {
   background: black;
@@ -107,13 +111,8 @@ ul {
   /* margin-left: 5px; */
 }
 
-.img_me img {
-  position: absolute;
-  top: -50%;
-  right: 30%;
-  height: 160%;
+.img_me {
 }
-/* Banner */
 .banner {
   background: var(--primary);
   margin-top: 2rem;
@@ -129,7 +128,7 @@ ul {
 }
 .banner .container > div img {
   width: 50px;
-  height: 50px;
+  /* height: 50px; */
   border-radius: 50%;
 }
 .banner .container > div {
@@ -192,7 +191,7 @@ ul {
   flex-direction: column;
 }
 .bottom {
-  background: yellow;
+  background: rgba(125, 116, 116, 0.505);
   width: 100%;
 }
 .links {
@@ -260,7 +259,19 @@ footer {
   gap: 2rem;
 }
 
-@media (max-width: 550) {
+#barmenu {
+  display: none;
+}
+[for="barmenu"] {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  [for="barmenu"] {
+    display: block;
+    cursor: pointer;
+  }
+
   .banner .container {
     display: flex;
     flex-direction: column;
@@ -271,5 +282,21 @@ footer {
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
+  }
+  .my_project .container .projectcard {
+    background: skyblue;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "I1" "I2" "I3" "I4";
+  }
+  .about_me .container {
+    flex-direction: column;
+  }
+  .about_me .container img {
+    /* position: absolute;
+    top: 100px; */
+    /* left: 150px; */
+    width: 100%;
+    /* height: 300px; */
   }
 }
