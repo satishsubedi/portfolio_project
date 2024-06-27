@@ -112,6 +112,7 @@ ul {
 }
 
 .img_me {
+  min-height: 300px;
 }
 .banner {
   background: var(--primary);
